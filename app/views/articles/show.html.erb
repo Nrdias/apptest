@@ -1,4 +1,8 @@
 <h1>Article Details</h1>
 
-<p> <%= @article.title %> </p>
-<p> <%= @article.description %> </p>
+<p> Title: <%= @article.title %> </p>
+<p> description: <%= @article.description %> </p>
+
+<button><%= link_to 'Edit', edit_article_path(@article)%></button>
+<button><%= link_to 'Delete', article_path(@article), data: {turbo_method: :delete}%></button>
+<button><%= link_to 'All Articles', articles_path%></button>
